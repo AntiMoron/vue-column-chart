@@ -20,11 +20,6 @@ export default {
   props: ["items"],
   computed: {
     maxValue: function() {
-      console.log(
-        (this.items || []).reduce((pre, cur) => {
-          return Math.max(cur.value || 0, pre);
-        }, 0)
-      );
       return (this.items || []).reduce((pre, cur) => {
         return Math.max(cur.value || 0, pre);
       }, 0);
